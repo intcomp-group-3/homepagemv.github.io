@@ -1,0 +1,882 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oswald:wght@559;700&family=Poppins:wght@900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #0F2A57;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px 350px 500px 450px 500px 415px 580px 200px ;
+    grid-template-areas: 
+    "header"
+    "banner"
+    "menu_hazel"
+    "computer_history"
+    "computer_programming"
+    "web_development" 
+    "cabling"
+    "topology"
+    "footer";
+   
+
+}
+
+
+.header{
+    grid-area: header;
+    background-color:  #363636;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    grid-template-areas: 
+    "logo_fill"
+    "submenu_child_header";
+   z-index: 5;
+    position: sticky;
+    top: 0px;
+}   
+
+.logo_fill{
+    grid-area: logo_fill;
+ 
+}
+
+.submenu_child_header{
+    grid-area: submenu_child_header;
+    
+}
+
+.btn{
+    position: relative;
+    top: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    padding: 3px 2px;
+    background-color:   var(--background-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+    --background-color: #363636;
+    --border-size: 2px;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+
+#memorybank_logo{
+    position: relative;
+    top: 15px;
+    height: 50px;
+  
+}
+
+
+
+
+
+/*our banner*/
+.banner{
+    grid-area: banner;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10px 220px 20px 1fr;
+    justify-items: center;
+    grid-template-areas: 
+    "background_picture"
+     "text_header"
+     "learn_more"
+    "logo_background";
+
+}
+
+.background_picture{
+    grid-area: background_picture;
+    width: 100vw;
+    height: 300px;
+   
+}
+ .logo_background{
+    grid-area: logo_background;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+    justify-self: flex-end;
+    position: relative;
+    left: 60px;
+    top: -80px;
+}
+.text_header{
+    position: relative;
+    top: 30px;
+    grid-area: text_header; 
+}
+
+.text_header > h1{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+.text_header > p{
+    color: #faeded;
+    font-size: 18px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px #000000;
+    white-space: nowrap;
+}
+
+.learn_more{
+    grid-area: learn_more;
+   
+}
+
+.background_button{
+    background-color: #130EAE;
+    width: fit-content;
+    z-index: 1;
+    position: relative;
+    left: 10px;
+}
+
+.background_button > button{
+    text-shadow: 2px 2px 8px #000000;
+    cursor: pointer;
+    position: relative;
+    top: -8px;
+    left: -10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Do Hyeon', sans-serif;
+   width: 100px;
+   height: 30px;
+    background-color:   dodgerblue;
+    outline: none;
+    border: none;
+   
+}
+/*menu ng ating websites*/
+.menu_hazel{
+    grid-area: menu_hazel;
+    background-color: #0D244A;
+    margin-top: 3px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "ch_button cp_button"
+     "wb_button more_button";
+
+
+}
+
+/*computer history button*/
+.ch_button{
+    grid-area: ch_button;
+    background-color: #132C56;
+    width: 185px;
+    height: 150px;
+
+}
+
+.ch_button > center > img{
+    position: relative;
+    top: 20px;
+    height: 60px;
+
+}
+
+.ch_button > h1{
+    padding-top: 25px;
+    color: #e9e7e7;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 4px;
+}
+
+/*computer programming button*/
+
+.cp_button{
+    grid-area: cp_button;
+    background-color: #132C56;
+    width: 185px;
+    height: 150px;
+}
+
+.cp_button > center > img{
+    position: relative;
+    top: 20px;
+    height: 60px;
+
+}
+
+.cp_button > h1{
+    padding-top: 25px;
+    color: #e9e7e7;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 4px;
+}
+
+
+
+/*web development button*/
+.wb_button{
+    grid-area: wb_button;
+    background-color: #132C56;
+    width: 185px;
+    height: 150px;
+}
+
+.wb_button > center > img{
+    position: relative;
+    top: 10px;
+    height: 70px;
+
+}
+
+.wb_button > h1{
+    padding-top: 14px;
+    color: #e9e7e7;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 4px;
+}
+
+
+
+
+/*more button*/
+.more_button{
+    grid-area: more_button;
+    background-color: #132C56;
+    width: 185px;
+    height: 150px;
+}
+
+.more_button > center > img{
+    position: relative;
+    top: 30px;
+    height: 60px;
+
+}
+
+.more_button > h1{
+    padding-top: 35px;
+    color: #e9e7e7;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 4px;
+}
+
+
+
+/*computer history banner*/
+.computer_history{
+    grid-area: computer_history;
+    background-color: #158DD3;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "logo_ch"
+    "text_ch" 
+    "paragraph_ch"
+     "learn_more"
+     "logo_background";
+}
+
+
+.computer_history > .logo_ch{
+    grid-area: logo_ch;
+}
+
+
+.logo_ch > img{
+    height: 80px;
+    opacity: .2;
+}
+
+
+.computer_history > .text_ch{
+    grid-area: text_ch;
+}
+
+
+.text_ch > h1{
+    margin-top: -2em;
+    font-family: 'Poppins', sans-serif; 
+    color: #FFFFFF;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 8px #000000;
+}
+.computer_history > .paragraph_ch{
+    grid-area: paragraph_ch;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  
+    white-space: nowrap;
+    font-size: 20px;
+
+}
+
+
+
+.computer_history > .learn_more{
+    grid-area: learn_more;
+    position: relative;
+    top: 30px;
+
+}
+
+.computer_history > .learn_more > a > .background_button > button{
+    width: 150px;
+    color: #111111;
+    background-color: #FFF700;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+
+.computer_history > .logo_background{
+    grid-area: logo_background;
+}
+
+
+
+
+.computer_programming{
+    grid-area: computer_programming;
+    background-color: #64BF70;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "logo_ch"
+    "text_ch" 
+    "paragraph_ch"
+     "learn_more"
+     "logo_background";
+}
+
+
+.computer_programming > .logo_ch{
+    grid-area: logo_ch;
+    position: relative;
+    top: 20px;
+}
+
+
+.computer_programming  .logo_ch > img{
+    height: 180px;
+    opacity: .5;
+}
+
+
+.computer_programming > .text_ch{
+    grid-area: text_ch;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 10px;
+}
+
+
+.computer_programming > .text_ch > h1{
+    margin-top: 0em;
+    font-family: 'Poppins', sans-serif; 
+    color: #FFFFFF;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 8px #000000;
+}
+.computer_programming > .paragraph_ch{
+    grid-area: paragraph_ch;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+  
+    white-space: nowrap;
+    font-size: 20px;
+
+}
+
+
+
+.computer_programming > .learn_more{
+    grid-area: learn_more;
+    position: relative;
+    top: 30px;
+
+}
+
+.computer_programming > .learn_more > a > .background_button > button{
+    width: 150px;
+    color: #111111;
+    background-color: #FFF700;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+
+.computer_programming > .logo_background{
+    grid-area: logo_background;
+}
+
+
+
+
+/*web development banner*/
+.web_development{
+    grid-area: web_development;
+    background-color: #F25858;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "logo_ch"
+    "text_ch" 
+    "paragraph_ch"
+     "learn_more"
+    "logo_background";
+}
+
+
+.web_development > .logo_ch{
+    grid-area: logo_ch;
+    position: relative;
+    width: 100vw;
+    top: 43px;
+}
+
+
+.web_development  .logo_ch > img{
+    height: 180px;
+    width: 100vw;
+    opacity: .3;
+}
+
+
+.web_development > .text_ch{
+    grid-area: text_ch;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 80px;
+}
+
+
+.web_development > .text_ch > h1{
+    margin-top: 0em;
+    font-family: 'Poppins', sans-serif; 
+    color: #FFFFFF;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 8px #000000;
+}
+.web_development > .paragraph_ch{
+    grid-area: paragraph_ch;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+.web_development > .learn_more{
+    grid-area: learn_more;
+    position: relative;
+    top: 30px;
+
+}
+
+.web_development > .learn_more > a > .background_button > button{
+    width: 150px;
+    color: #111111;
+    background-color: #FFF700;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+
+.web_development > .logo_background{
+    grid-area: logo_background;
+}
+
+
+/*cabling natin to mga par*/
+.cabling{
+    grid-area: cabling;
+    background-color: #B1389D;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "logo_ch"
+    "text_ch" 
+    "paragraph_ch"
+     "learn_more"
+    "logo_background";
+}
+
+
+.cabling > .logo_ch{
+    grid-area: logo_ch;
+    position: relative;
+    width: 100vw;
+    top: 43px;
+}
+
+
+.cabling  .logo_ch > img{
+    height: 180px;
+    width: 100vw;
+    opacity: .5;
+}
+
+
+.cabling > .text_ch{
+    grid-area: text_ch;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 80px;
+}
+
+
+.cabling > .text_ch > h1{
+    margin-top: 0em;
+    font-family: 'Poppins', sans-serif; 
+    color: #FFFFFF;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 8px #000000;
+}
+.cabling > .paragraph_ch{
+    grid-area: paragraph_ch;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+.cabling > .learn_more{
+    grid-area: learn_more;
+    position: relative;
+    top: 30px;
+
+}
+
+.cabling > .learn_more > a > .background_button > button{
+    width: 150px;
+    color: #111111;
+    background-color: #FFF700;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+
+.cabling > .logo_background{
+    grid-area: logo_background;
+}
+
+
+
+/*our topology banner*/
+.topology{
+    grid-area: topology;
+    background-color:#FF7053;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "logo_ch"
+    "text_ch" 
+    "paragraph_ch"
+     "learn_more"
+    "logo_background";
+}
+
+
+.topology > .logo_ch{
+    grid-area: logo_ch;
+    position: relative;
+    width: 100vw;
+    top: 43px;
+}
+
+
+.topology  .logo_ch > img{
+    height: 180px;
+    width: 100vw;
+    opacity: .5;
+}
+
+
+.topology > .text_ch{
+    grid-area: text_ch;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    line-height: 35px;
+    margin-bottom: 50px;
+}
+
+
+.topology > .text_ch > h1{
+    margin-top: 0em;
+    font-family: 'Poppins', sans-serif; 
+    color: #FFFFFF;
+    word-spacing: 10px;
+    text-shadow: 2px 2px 8px #000000;
+}
+.topology > .paragraph_ch{
+    grid-area: paragraph_ch;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+
+
+.topology > .learn_more{
+    grid-area: learn_more;
+    position: relative;
+    top: 30px;
+
+}
+
+.topology > .learn_more > a > .background_button > button{
+    width: 150px;
+    color: #111111;
+    background-color: #FFF700;
+    text-shadow: 2px 2px 8px #ffffff;
+}
+
+.topology > .logo_background{
+    grid-area: logo_background;
+}
+
+
+
+
+/*our footer*/
+.footer{
+    grid-area: footer;
+    background-color: #363636;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px 50px 1fr ;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: 
+    "footer_logo social_media"
+    "footer_sub_menu footer_sub_menu"
+    "alright_reserved alright_reserved"
+}
+
+.footer_logo{
+    grid-area: footer_logo;
+}
+
+.social_media{
+    grid-area: social_media;
+    position: relative;
+    top: 20px;
+   
+}
+
+.social_media > a > img{
+    width: 40px;
+}
+
+
+.footer_sub_menu{
+    grid-area: footer_sub_menu;
+    position: relative;
+    top: 10px;
+}
+
+.alright_reserved{
+    grid-area: alright_reserved;
+    position: relative;
+    top: 15px;
+}
+
+.alright_reserved > p{
+
+font-family: Arial, Helvetica, sans-serif;
+color: #dad8d8;
+text-align: center;
+line-height: 20px;
+
+}
+
+
+
+
+@media screen and (min-width:736px){
+  
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 300px 250px 300px 300px 300px 300px 300px 100px ;
+        grid-template-areas: 
+        "header"
+        "banner"
+        "menu_hazel"
+        "computer_history"
+        "computer_programming"
+        "web_development" 
+        "cabling"
+        "topology"
+        "footer";
+      
+    }
+    
+    
+    .header{
+        grid-area: header;
+        background-color:  #363636;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: start;
+        align-items: center;
+        grid-template-areas: 
+        "logo_fill"
+        "submenu_child_header";
+      
+    }
+    
+    .logo_fill{
+        grid-area: logo_fill;
+     
+    }
+    
+    .submenu_child_header{
+        grid-area: submenu_child_header;
+     
+        
+    }
+    
+    .btn{
+    
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        padding: 3px 2px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        --border-size: 2px;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    
+    
+    #memorybank_logo{
+        position: relative;
+        left: 50px;
+        height: 80px;
+      
+    }
+    
+    
+    
+    
+    
+    /*our banner*/
+    .banner{
+        grid-area: banner;
+      
+    }
+    
+    .menu_hazel{
+        grid-area: menu_hazel;
+        background-color: #0D244A;
+        margin-top: 3px;
+    }
+    
+    .computer_history{
+        grid-area: computer_history;
+        background-color: #158DD3;
+        margin-top: 5px;
+    }
+    
+    .computer_programming{
+        grid-area: computer_programming;
+        background-color: #64BF70;
+        margin-top: 5px;
+    
+        
+    }
+    
+    .web_development{
+        grid-area: web_development;
+        background-color: #F25858;
+        margin-top: 5px;
+    
+    }
+    
+    
+    .cabling{
+        grid-area: cabling;
+        background-color: #B1389D;
+        margin-top: 5px;
+    
+    }
+    
+    .topology{
+        grid-area: topology;
+        background-color:#FF7053;
+        margin-top: 5px;
+    }
+
+    
+    .footer{
+        grid-area: footer;
+        background-color: #363636;
+        margin-top: 10px;
+    }
+    
+}
